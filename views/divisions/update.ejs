@@ -1,0 +1,81 @@
+<!-- views/divisions/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update division</title>
+  </head>
+  <body>
+    <h1>Update Division!</h1>
+    <form action="/divisions/<%=division._id%>?_method=PUT" method="POST">
+        <!-- Belt Input -->
+        <label for="belt">Belt:</label>
+        <input type="text" name="belt" id="belt" value="<%=division.belt%>" required />
+        <!-- Age Category with Radio Buttons -->
+        <div>
+            <label>Age Category:</label>
+            <div>
+              <label for="child">
+                <input type="radio" name="age" id="child" value="Child" <%= division.age === "Child" ? "checked" : "" %> required />
+                Child
+              </label>
+            </div>
+            <div>
+              <label for="adult">
+                <input type="radio" name="age" id="adult" value="Adult" <%= division.age === "Adult" ? "checked" : "" %> required />
+                Adult
+              </label>
+            </div>
+            <div>
+              <label for="master1">
+                <input type="radio" name="age" id="master1" value="Master 1" <%= division.age === "Master 1" ? "checked" : "" %> required />
+                Master 1
+              </label>
+            </div>
+            <div>
+              <label for="master2">
+                <input type="radio" name="age" id="master2" value="Master 2" <%= division.age === "Master 2" ? "checked" : "" %> required />
+                Master 2
+              </label>
+            </div>
+          </div>
+      
+        <!-- Weight Category with Checkboxes -->
+        <label>Weight Category:</label>
+        <div>
+          <label for="50-60kg">
+            <input type="checkbox" name="weight" id="50-60kg" value="50-60kg" <%= division.weight.includes("50-60kg") ? "checked" : "" %> />
+            50-60kg
+          </label>
+        </div>
+        <div>
+          <label for="60-70kg">
+            <input type="checkbox" name="weight" id="60-70kg" value="60-70kg" <%= division.weight.includes("60-70kg") ? "checked" : "" %> />
+            60-70kg
+          </label>
+        </div>
+        <div>
+          <label for="70-80kg">
+            <input type="checkbox" name="weight" id="70-80kg" value="70-80kg" <%= division.weight.includes("70-80kg") ? "checked" : "" %> />
+            70-80kg
+          </label>
+        </div>
+        <div>
+          <label for="80-90kg">
+            <input type="checkbox" name="weight" id="80-90kg" value="80-90kg" <%= division.weight.includes("80-90kg") ? "checked" : "" %> />
+            80-90kg
+          </label>
+        </div>
+        <div>
+          <label for="90-100kg">
+            <input type="checkbox" name="weight" id="90-100kg" value="90-100kg" <%= division.weight.includes("90-100kg") ? "checked" : "" %> />
+            90-100kg
+          </label>
+        </div>
+      
+        <button type="submit">Update Division</button>
+      </form>
+  </body>
+</html>

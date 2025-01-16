@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Divisions</title>
+</head>
+<body>
+    <h1><%= division.belt %></h1>
+    <p><%= division.age %></p>
+    <ul>
+        <% division.weight.forEach((bracket) => { %>
+         <li>
+            <%= bracket %>
+        </li>
+        <% }) %>
+    </ul>
+    <form action="/divisions/<%=division._id%>/comments" method="POST">
+        <label for="content">Comment:</label>
+        <textarea name="content" id="content" required></textarea>
+        <button type="submit">Post</button>
+    </form>
+    <form action="/divisions/<%=division._id%>?_method=DELETE" method="POST">
+        <button type="submit">
+          Delete <%= division.name %>
+        </button>
+    </form>
+    <!-- Link to take us to the new edit page at /division/update/:id -->
+    <button onclick="window.location.href='/divisions/update/<%=division._id%>'">Update</button>
+</body>
+</html>

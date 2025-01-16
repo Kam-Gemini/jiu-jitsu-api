@@ -1,0 +1,82 @@
+<!-- views/divisions/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a division</title>
+  </head>
+  <body>
+    <h1>Create a New Division!</h1>
+    <form action="/divisions" method="POST">
+        <!-- Belt Input -->
+        <label for="belt">Belt:</label>
+        <input type="text" name="belt" id="belt" required />
+      
+        <!-- Age Category with Radio Buttons -->
+        <div>
+            <label>Age Category:</label>
+            <div>
+              <label for="child">
+                <input type="radio" name="age" id="child" value="Child" required />
+                Child
+              </label>
+            </div>
+            <div>
+              <label for="adult">
+                <input type="radio" name="age" id="adult" value="Adult" required />
+                Adult
+              </label>
+            </div>
+            <div>
+              <label for="master1">
+                <input type="radio" name="age" id="master1" value="Master 1" required />
+                Master 1
+              </label>
+            </div>
+            <div>
+              <label for="master2">
+                <input type="radio" name="age" id="master2" value="Master 2" required />
+                Master 2
+              </label>
+            </div>
+          </div>
+      
+        <!-- Weight Category with Checkboxes -->
+        <label>Weight Category:</label>
+        <div>
+          <label for="50-60kg">
+            <input type="checkbox" name="weight" id="50-60kg" value="50-60kg" />
+            50-60kg
+          </label>
+        </div>
+        <div>
+          <label for="60-70kg">
+            <input type="checkbox" name="weight" id="60-70kg" value="60-70kg" />
+            60-70kg
+          </label>
+        </div>
+        <div>
+          <label for="70-80kg">
+            <input type="checkbox" name="weight" id="70-80kg" value="70-80kg" />
+            70-80kg
+          </label>
+        </div>
+        <div>
+          <label for="80-90kg">
+            <input type="checkbox" name="weight" id="80-90kg" value="80-90kg" />
+            80-90kg
+          </label>
+        </div>
+        <div>
+          <label for="90-100kg">
+            <input type="checkbox" name="weight" id="90-100kg" value="90-100kg" />
+            90-100kg
+          </label>
+        </div>
+      
+        <button type="submit">Add Division</button>
+      </form>
+  </body>
+</html>

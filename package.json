@@ -1,9 +1,19 @@
 {
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "mongoose": "^8.9.3",
-    "morgan": "^1.10.0"
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.0.0",
+    "mongoose-hidden": "^1.9.1",
+    "mongoose-unique-validator": "^4.0.1",
+    "morgan": "^1.10.0",
+    "override-method": "^3.0.0",
+    "session": "^0.1.0",
+    "validator": "^13.12.0"
   },
   "type": "module"
 }
